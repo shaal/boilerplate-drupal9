@@ -5,11 +5,15 @@ tasks:
   - name: terminal
     prebuild: |
       .gitpod/install-docksal.sh
-    # command: |
-    #   fin init
+    command: |
+      .gitpod/install-docksal.sh
+      fin update
+      fin up
 # Set the following ports public
 ports:
   - port: 8080
+  - port: 8443
+    onOpen: ignore
 
 github:
   prebuilds:
